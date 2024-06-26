@@ -1,7 +1,7 @@
 """
     Crie um programa que determine se um ano informado pelo usuário é bissexto ou não.
 """
-print('Vamos verificar se um ano é bicesto')
+print('Vamos verificar se um ano é bissexto')
 user_year = input(('Digite um ano em formato númerico: '))
 
 def check_if_the_year_is_double(year):
