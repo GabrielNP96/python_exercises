@@ -2,7 +2,7 @@
 
 def positive_or_negative():
     try:
-        num = int(input('Digite um número: '))
+        num = int(input('Digite um número inteiro: '))
         if type(num) == int:
             if num < 0:
                 return print(f'{num} é negativo.')
