@@ -3,7 +3,11 @@ import os
 
 def celsius_to_fahrenheit(number):
      return f'{number}° é igual á {(number * 9/5) + 32}'
-def get_user_number():
+
+def fahrenheit_to_celciusus(number):
+     return f'{number}° é igual á {(number - 32) * 5/9}'
+
+def conversor():
     i = True
     while i == True:
         celsius_or_fahrenheit = input("Para converter Celsius para Fahrenheit digite 1.\nPara coverter Fahrenheit para Celsius Digite 2.\nDigite aqui: ")
@@ -20,4 +24,4 @@ def get_user_number():
         except ValueError:
             print('Digite apenas 1 ou 2')
             print('-' * 15)
-get_user_number()
+conversor()
