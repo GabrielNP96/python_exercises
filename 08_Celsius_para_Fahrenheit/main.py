@@ -1,6 +1,8 @@
 import os
 #Escreva um programa que converta temperaturas de Celsius para Fahrenheit e vice-versa.
 
+def celsius_to_fahrenheit(number):
+     return f'{number}° é igual á {(number * 9/5) + 32}'
 def get_user_number():
     i = True
     while i == True:
