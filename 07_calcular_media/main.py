@@ -1,6 +1,6 @@
 #Crie um programa que receba uma lista de números e calcule a média aritmética desses números.
 
-def get_user_number():
+def get_user_numbers():
     numbers_list = []
     print("Vamos adiconar números para calcularmos a média.")
     i = 0
@@ -22,10 +22,10 @@ def get_user_number():
             out = input('Já adicionou todos os números que você queria? "s" para sim e qualquer tecla para não: ')
             if out.lower() == 's':
                 return numbers_list
-        
 
-        
-            
+def calculate_average(numbers):
+    average = sum(numbers) / len(numbers)
+    return f'A média dos números fornecidos é: {average:.2f}'
 
-print(get_user_number())
-    
+list_of_numbers = get_user_numbers()
+print(calculate_average(list_of_numbers))
