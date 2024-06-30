@@ -1,4 +1,3 @@
-import os
 #Escreva um programa que converta temperaturas de Celsius para Fahrenheit e vice-versa.
 
 def celsius_to_fahrenheit(number):
