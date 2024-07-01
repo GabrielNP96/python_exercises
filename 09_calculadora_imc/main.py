@@ -4,19 +4,22 @@ def get_user_data():
     i = True
     while i == True:
         try:
-            get_user_weight = float('Digite seu peso: ')
-            get_user_height = float('Digite sua altura: ')
+            get_user_weight = float(input('Digite seu peso: '))
+            get_user_height = float(input('Digite sua altura: '))
 
             return (get_user_weight, get_user_height)
         except ValueError:
-            print('Dados inválidos')
+            print('Dados inválidos\n')
+            print('-' *15 + '\n')
+            
+            
 
 def IMC(weight, height):
     imc = weight / (height **2)
 
     if imc < 16.9:
         return f'Seu imc é {imc:.2f} e você está muito abaixo do peso.\nProcure um médico.'
-    elif imc >= 17 and imc >= 18.4:
+    elif imc >= 17 and imc <= 18.4:
         return f'Seu imc é {imc:.2f} e você está abaixo do peso\nProcure um médico.'
     elif imc > 18.4 and imc < 25:
         return f'Seu imc é {imc:.2f} e você está no peso ideal.'
@@ -29,4 +32,5 @@ def IMC(weight, height):
     else:
         return f'Seu imc é {imc:.2f} e você está com obesidade grau III.\nProcure um médico'
     
-    
+user_data = get_user_data()
+print(IMC(user_data[0],user_data[1]))
