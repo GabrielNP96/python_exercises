@@ -4,18 +4,18 @@
 '''
 
 def get_user_data():
-    print(f'Bem vindo ao programa de descontos\n{'-' * 25}')
+    print(f'Bem vindo ao programa de descontos\n{'-' * 22}')
 
     i = True
     while i == True:
         try:
             price_of_the_product = float(input('Digite o preço do seu produto: '))
             discount_amount = float(input('Agora digite o valor do desconto: '))
-            if price_of_the_product >= 0.01 and discount_amount >= 0.01:
+            if price_of_the_product >= 0.01 and discount_amount >= 0.01 and discount_amount <= 100:
                 return (price_of_the_product, discount_amount)
-            print('Digite valores válidos')
+            print(f'Digite valores válidos\n{'-' * 22}')
         except ValueError:
-            print('Digite valores válidos')
+            print(f'Digite valores válidos\n{'-' * 22}')
 
 def simple_discount(price, discount):
     full_discount = price - ((price / 100) * discount)
