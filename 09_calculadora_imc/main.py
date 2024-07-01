@@ -7,7 +7,11 @@ def get_user_data():
             get_user_weight = float(input('Digite seu peso: '))
             get_user_height = float(input('Digite sua altura: '))
 
-            return (get_user_weight, get_user_height)
+            if get_user_weight > 25 and get_user_weight < 370 and get_user_height > 0.627 and get_user_height < 2.52:
+                return (get_user_weight, get_user_height)
+            
+            print('Um ou os dois valores são inválidos...\n')
+            print('-' *15 + '\n')
         except ValueError:
             print('Dados inválidos\n')
             print('-' *15 + '\n')
